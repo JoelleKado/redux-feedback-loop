@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
-
-
+import { Provider } from 'react-redux'
 
 class Feeling extends Component {
 
@@ -12,9 +10,17 @@ class Feeling extends Component {
         
     }
 
-    
+    handleChange = (event) => {
+        this.setState({
+            feeling : event.target.value
+        })
+        //this.props.history.push('/Understanding');
+    }
 
     addFeeling = () => {
+        this.props.dispatch({ type: 'ADD_FEELING', payload: this.state })
+
+        
         this.props.history.push('/Understanding');
     }
 
@@ -28,7 +34,7 @@ class Feeling extends Component {
                 <h2>Your Feeling</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label>: </label>
-                    <input required placeholder="Feeling" type="number" />
+                    <input required placeholder="Feeling" type="number" onChange={this.handleChange}/>
                     <button onClick={this.addFeeling}>Next</button>
 
                 </form>
@@ -36,4 +42,15 @@ class Feeling extends Component {
         )
     }
 }
-export default Feeling;
+
+  
+  
+  
+
+  const putReduxStateOnProps = (reduxState) => ({
+    reduxState
+  });
+  
+  export default connect(putReduxStateOnProps)(Feeling);
+   // export default Feeling;
+ 
