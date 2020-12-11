@@ -13,8 +13,8 @@ class Understanding extends Component {
 
     
 
-    addCustomer = () => {
-        this.props.history.push('/Checkout')
+    addUnderstanding = () => {
+        this.props.history.push('/Support')
     }
 
     handleSubmit = () => {
@@ -28,6 +28,8 @@ class Understanding extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>: </label>
                     <input required placeholder="Understanding" type="number" />
+                    <button onClick={this.addUnderstanding}>Next</button>
+
                     
                 </form>
             </section>

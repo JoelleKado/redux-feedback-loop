@@ -14,8 +14,8 @@ class Support extends Component {
 
     
 
-    addCustomer = () => {
-        this.props.history.push('/Checkout')
+    addSupport = () => {
+        this.props.history.push('/Comments')
     }
 
     handleSubmit = () => {
@@ -29,7 +29,8 @@ class Support extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>: </label>
                     <input required placeholder="Support" type="number" />
-                    
+                    <button onClick={this.addSupport}>Next</button>
+
                 </form>
             </section>
         )

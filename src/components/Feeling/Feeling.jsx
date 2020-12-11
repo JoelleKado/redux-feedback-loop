@@ -14,8 +14,8 @@ class Feeling extends Component {
 
     
 
-    addCustomer = () => {
-        this.props.history.push('/Checkout')
+    addFeeling = () => {
+        this.props.history.push('/Understanding');
     }
 
     handleSubmit = () => {
@@ -29,7 +29,8 @@ class Feeling extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>: </label>
                     <input required placeholder="Feeling" type="number" />
-                    
+                    <button onClick={this.addFeeling}>Next</button>
+
                 </form>
             </section>
         )
