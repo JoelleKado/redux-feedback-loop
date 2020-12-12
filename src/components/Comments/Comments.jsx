@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 
 
@@ -12,10 +12,20 @@ class Comments extends Component {
         
     }
 
-    
+    handleChange = (event) => {
+        this.setState({
+            comments : event.target.value
+        });
+        //this.props.history.push('/Understanding');
+    }
 
-    addCustomer = () => {
-        this.props.history.push('/Checkout')
+
+    addComments = () => {
+        console.log(this.state);
+
+        this.props.dispatch({ type: 'ADD_COMMENTS', payload: this.state })
+
+        //this.props.history.push('/Checkout')
     }
 
     handleSubmit = () => {
@@ -28,11 +38,21 @@ class Comments extends Component {
                 <h2>Your Comments</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label>: </label>
-                    <input required placeholder="Comments" type="number" />
-                    
+                    <input required placeholder="Comments" type="text" onChange={this.handleChange}/>
+                    <button onClick={this.addComments}>Next</button>
+
                 </form>
             </section>
+
+
+
+
         )
     }
 }
-export default Comments;
+//export default Comments;
+const putReduxStateOnProps = (reduxState) => ({
+    reduxState
+  });
+  
+  export default connect(putReduxStateOnProps)(Comments);
