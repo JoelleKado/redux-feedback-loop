@@ -32,11 +32,19 @@ const supportReducer = (state = [], action) => {
     return state;
 }
 
+const commentsReducer = (state = [], action) => {
+    if (action.type === 'ADD_COMMENTS') {
+        return action.payload;
+    }
+    return state;
+}
+
 const storeInstance = createStore(
     combineReducers({
         feelingReducer,
         understandingReducer,
-        supportReducer
+        supportReducer,
+        commentsReducer
     }),
    // applyMiddleware(logger),
 );
