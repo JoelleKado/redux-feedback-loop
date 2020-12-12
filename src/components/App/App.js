@@ -9,6 +9,7 @@ import Feeling from '../Feeling/Feeling.jsx'
 import Understanding from '../Understanding/Understanding.jsx';
 import Support from '../Support/Support.jsx';
 import Comments from '../Comments/Comments.jsx';
+import Review from '../Review/Review.jsx';
 
 
 class App extends Component {
@@ -30,6 +31,8 @@ class App extends Component {
               <li><Link to="/Understanding">Understanding</Link></li>
               <li><Link to="/Support">Support</Link></li>
               <li><Link to="/Comments">Comments</Link></li>
+              <li><Link to="/Review">Review</Link></li>
+
 
             </ul>
           </nav>
@@ -37,6 +40,7 @@ class App extends Component {
           <Route exact path="/Understanding" component={Understanding} />
           <Route exact path="/Support" component={Support} />
           <Route exact path="/Comments" component={Comments} />
+          <Route exact path="/Review" component={Review} />
 
 
         </Router>
