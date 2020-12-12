@@ -9,7 +9,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
-
+const historyRouter = require('./Routes/history.router.js');
+app.use('/history', historyRouter);
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
