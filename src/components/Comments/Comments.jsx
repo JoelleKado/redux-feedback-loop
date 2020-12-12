@@ -25,10 +25,11 @@ class Comments extends Component {
 
         this.props.dispatch({ type: 'ADD_COMMENTS', payload: this.state })
 
-        //this.props.history.push('/Checkout')
+        this.props.history.push('/Review')
     }
 
     handleSubmit = () => {
+
         
     }
 
