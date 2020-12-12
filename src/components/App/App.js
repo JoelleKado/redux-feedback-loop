@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-//import axios from 'axios';
+import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-
 
 import Feeling from '../Feeling/Feeling.jsx'
 import Understanding from '../Understanding/Understanding.jsx';
@@ -13,6 +12,23 @@ import Review from '../Review/Review.jsx';
 
 
 class App extends Component {
+
+  componentDidMount() {
+    this.getHistory();
+  }
+
+  getHistory = () => {
+    // tell axios to make a get call, then dispatch the array results
+    axios.get ('/history').then( (response) => {
+      console.log (`GET Response:`, response.data);
+      // dispatch Array results
+      //this.props.dispatch ({type: 'GET_PIZZAS' , payload: response.data })
+
+    }).catch ( (err ) => {
+      console.log (`Error in Get`, err);
+    })
+  }
+
   render() {
     return (
       <div className="App">

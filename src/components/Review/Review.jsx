@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-//import { connect } from 'react-redux';
+import { connect } from 'react-redux';
+import axios from 'axios';
+
 
 class Review extends Component {
 
@@ -17,10 +19,13 @@ class Review extends Component {
     }
 
     submitFeedback = () => {
-        this.props.dispatch({ type: 'ADD_FEELING', payload: this.state })
+        console.log('reduxState being submitted:', this.props.reduxState);
 
         
-        this.props.history.push('/Understanding');
+       // this.props.dispatch({ type: 'ADD_FEELING', payload: this.props.reduxState })
+
+        
+       // this.props.history.push('/Understanding');
     }
 
     handleSubmit = () => {
@@ -46,10 +51,8 @@ class Review extends Component {
   
   
 
-//   const putReduxStateOnProps = (reduxState) => ({
-//     reduxState
-//   });
+  const putReduxStateOnProps = (reduxState) => ({
+    reduxState
+  });
   
-//   export default connect(putReduxStateOnProps)(Feeling);
-   export default Review;
- 
+  export default connect(putReduxStateOnProps)(Review); 
