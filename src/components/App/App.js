@@ -4,6 +4,7 @@ import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import Admin from '../Admin/Admin'
 import Feeling from '../Feeling/Feeling.jsx'
 import Understanding from '../Understanding/Understanding.jsx';
 import Support from '../Support/Support.jsx';
@@ -22,7 +23,7 @@ class App extends Component {
     axios.get ('/history').then( (response) => {
       console.log (`GET Response:`, response.data);
       // dispatch Array results
-      //this.props.dispatch ({type: 'GET_PIZZAS' , payload: response.data })
+      this.props.dispatch ({type: 'GOT_HISTORY', payload: response.data })
 
     }).catch ( (err ) => {
       console.log (`Error in Get`, err);
@@ -37,6 +38,7 @@ class App extends Component {
           <h4><i>Don't forget it!</i></h4>
           REDUX STATE: {JSON.stringify(this.props.reduxState)}
 
+          <Admin/>
           {/* <Feeling/> */}
         </header>
         <br/>
