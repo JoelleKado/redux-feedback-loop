@@ -1,10 +1,27 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
 
 
 
 
 class Admin extends Component {
+
+    componentDidMount() {
+        this.getHistory();
+      }
+    
+      getHistory = () => {
+        // tell axios to make a get call, then dispatch the array results
+        axios.get ('/history').then( (response) => {
+          console.log (`GET Response:`, response.data);
+          // dispatch Array results
+          this.props.dispatch ({type: 'GOT_HISTORY', payload: response.data })
+    
+        }).catch ( (err ) => {
+          console.log (`Error in Get`, err);
+        })
+      }
 
 
     
