@@ -14,21 +14,21 @@ import Review from '../Review/Review.jsx';
 
 class App extends Component {
 
-  componentDidMount() {
-    this.getHistory();
-  }
+  // componentDidMount() {
+  //   this.getHistory();
+  // }
 
-  getHistory = () => {
-    // tell axios to make a get call, then dispatch the array results
-    axios.get ('/history').then( (response) => {
-      console.log (`GET Response:`, response.data);
-      // dispatch Array results
-      this.props.dispatch ({type: 'GOT_HISTORY', payload: response.data })
+  // getHistory = () => {
+  //   // tell axios to make a get call, then dispatch the array results
+  //   axios.get ('/history').then( (response) => {
+  //     console.log (`GET Response:`, response.data);
+  //     // dispatch Array results
+  //     this.props.dispatch ({type: 'GOT_HISTORY', payload: response.data })
 
-    }).catch ( (err ) => {
-      console.log (`Error in Get`, err);
-    })
-  }
+  //   }).catch ( (err ) => {
+  //     console.log (`Error in Get`, err);
+  //   })
+  // }
 
   render() {
     return (
@@ -38,7 +38,7 @@ class App extends Component {
           <h4><i>Don't forget it!</i></h4>
           REDUX STATE: {JSON.stringify(this.props.reduxState)}
 
-          <Admin/>
+          {/* <Admin/> */}
           {/* <Feeling/> */}
         </header>
         <br/>
@@ -50,6 +50,7 @@ class App extends Component {
               <li><Link to="/Support">Support</Link></li>
               <li><Link to="/Comments">Comments</Link></li>
               <li><Link to="/Review">Review</Link></li>
+              <li><Link to="/Admin">Admin</Link></li>
 
 
             </ul>
@@ -59,6 +60,7 @@ class App extends Component {
           <Route exact path="/Support" component={Support} />
           <Route exact path="/Comments" component={Comments} />
           <Route exact path="/Review" component={Review} />
+          <Route exact path="/Admin" component={Admin} />
 
 
         </Router>
