@@ -18,9 +18,17 @@ const feelingReducer = (state = [], action) => {
     return state;
 }
 
+const understandingReducer = (state = [], action) => {
+    if (action.type === 'ADD_UNDERSTANDING') {
+        return action.payload;
+    }
+    return state;
+}
+
 const storeInstance = createStore(
     combineReducers({
-        feelingReducer
+        feelingReducer,
+        understandingReducer
     }),
    // applyMiddleware(logger),
 );
