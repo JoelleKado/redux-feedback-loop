@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-//import { connect } from 'react-redux';
+import { connect } from 'react-redux';
+
 
 
 
@@ -12,10 +13,21 @@ class Support extends Component {
         
     }
 
+    handleChange = (event) => {
+        this.setState({
+            support : event.target.value
+        })
+        //this.props.history.push('/Understanding');
+    }
+
+
     
 
     addSupport = () => {
+        this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state })
+
         this.props.history.push('/Comments')
+
     }
 
     handleSubmit = () => {
@@ -28,7 +40,7 @@ class Support extends Component {
                 <h2>Support Level</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label>: </label>
-                    <input required placeholder="Support" type="number" />
+                    <input required placeholder="Support" type="number" onChange={this.handleChange}/>
                     <button onClick={this.addSupport}>Next</button>
 
                 </form>
@@ -36,4 +48,9 @@ class Support extends Component {
         )
     }
 }
-export default Support;
+//export default Support;
+const putReduxStateOnProps = (reduxState) => ({
+    reduxState
+  });
+  
+  export default connect(putReduxStateOnProps)(Support);
