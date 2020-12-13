@@ -3,14 +3,6 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 
 class Review extends Component {
-// let ultimateReduxState = this.props.reduxState;
-
-//     state = {
-//         feeling : ultimateReduxState.feelingReducer.feeling,
-//         understanding: ultimateReduxState.understandingReducer.understanding,
-//         support: ultimateReduxState.supportReducer.support,
-//         comments: ultimateReduxState.commentsReducer.comments
-//     }
 
     goBack = () => {
         this.props.history.push('/Comments')
@@ -18,41 +10,25 @@ class Review extends Component {
 
     handleChange = (event) => {
         this.setState({
-            feeling : event.target.value
+            feeling: event.target.value
         })
-        //this.props.history.push('/Understanding');
     }
 
     submitFeedback = () => {
         console.log('reduxState being submitted:', this.props.reduxState);
-
-        axios.post('/history', this.props.reduxState).then( ( response ) =>{
-            console.log( 'back from POST:', response.data );
-            // empty inputs
-            // this.setState({
-            //   newBook: {
-            //     title: '',
-            //     author: ''
-            //   }
-            // }) // end set state
-            // update books on DOM
-            // this.props.getBooks();
-          }).catch( ( err ) =>{
-            console.log( err );
-          }) //end axios
-       // this.props.dispatch({ type: 'ADD_FEELING', payload: this.props.reduxState })
+        axios.post('/history', this.props.reduxState).then((response) => {
+            console.log('back from POST:', response.data);
+        }).catch((err) => {
+            console.log(err);
+        }) //end axios
         this.props.history.push('/ThankYou');
     }
 
-    // handleSubmit = () => {
-    //     console.log('hello from review handlesubmut');
-    // }
-    //{this.props.reduxState.feelingReducer}
     render() {
         return (
             <>
                 <h2>Review</h2>
-                <table className="center"> 
+                <table className="center">
                     <tbody>
                         <tr>
                             <th>Feeling</th>
@@ -68,15 +44,14 @@ class Review extends Component {
                         </tr>
                     </tbody>
                 </table>
-                       <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit}>
                     <label></label>
-                    {/* <input required placeholder="Feeling" type="number" onChange={this.handleChange}/> */}
                     <button onClick={this.goBack}>Back</button>
                     <button onClick={this.submitFeedback}>SUBMIT FEEDBACK</button>
-                </form> 
+                </form>
             </>
         )
     }
 };//END Review
-const putReduxStateOnProps = (reduxState) => ({reduxState});
+const putReduxStateOnProps = (reduxState) => ({ reduxState });
 export default connect(putReduxStateOnProps)(Review); 

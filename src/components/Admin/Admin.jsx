@@ -4,10 +4,6 @@ import axios from 'axios';
 
 class Admin extends Component {
 
-    // componentDidMount() {
-    //     this.getHistory();
-    // }
-
     getHistory = () => {
         // tell axios to make a get call, then dispatch the array results
         axios.get('/history').then((response) => {
@@ -20,22 +16,13 @@ class Admin extends Component {
         })
     }
 
-    // handleChange = (event) => {
-    //     this.setState({
-    //         comments: event.target.value
-    //     });
-    //     //this.props.history.push('/Understanding');
-    // }
-
-    // showHistory = () => {
-    //     console.log(this.state);
-
-    //     this.props.dispatch({ type: 'ADD_COMMENTS', payload: this.state })
-
-    //     this.props.history.push('/Review')
-    // }
-
-    // handleSubmit = () => {
+    // deleteArticle = () => {
+    //     console.log(this);
+    //     let idToDelete = [(this).closest('tr').data('id')]
+    //     axios.delete('/history', {data: idToDelete}).then((response) => {
+    //     }).catch((err) => {
+    //         console.log(`Error in Get`, err);
+    //     })
     // }
 
     render() {
@@ -63,6 +50,7 @@ class Admin extends Component {
                                     <td>{article.comments}</td>
                                     <td>{article.flagged}</td>
                                     <td>{article.date}</td>
+                                    {/* <button onClick={this.deleteArticle}>DELETE</button> */}
                                 </tr>)
                         })}
                     </tbody>
@@ -70,18 +58,13 @@ class Admin extends Component {
 
                 <form onSubmit={this.handleSubmit}>
                     <label></label>
-                    {/* <input required placeholder="Comments" type="text" onChange={this.handleChange}/> */}
                     <button onClick={this.getHistory}>GET HISTORY</button>
                 </form>
-                
+
                 REDUX STATE: {JSON.stringify(this.props.reduxState)}
             </section>
         )
     }
-}
-//export default Comments;
-const putReduxStateOnProps = (reduxState) => ({
-    reduxState
-});
-
+};//EXIT Admin
+const putReduxStateOnProps = (reduxState) => ({ reduxState });
 export default connect(putReduxStateOnProps)(Admin);
