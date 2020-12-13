@@ -45,27 +45,20 @@ class App extends Component {
         <Router>
           <nav>
             <ul>
-            
-              {/* <li><Link to="/">HOME</Link></li> */}
               <li><Link to="/Feeling">HOME</Link></li>
               <li><Link to="/Understanding">Understanding</Link></li>
               <li><Link to="/Support">Support</Link></li>
               <li><Link to="/Comments">Comments</Link></li>
               <li><Link to="/Review">Review</Link></li>
               <li><Link to="/Admin">ADMIN</Link></li>
-
-
             </ul>
           </nav>
-          {/* <Route exact path="/" component={App} /> */}
           <Route exact path="/Feeling" component={Feeling} />
           <Route exact path="/Understanding" component={Understanding} />
           <Route exact path="/Support" component={Support} />
           <Route exact path="/Comments" component={Comments} />
           <Route exact path="/Review" component={Review} />
           <Route exact path="/Admin" component={Admin} />
-
-
         </Router>
       </div>
     );
