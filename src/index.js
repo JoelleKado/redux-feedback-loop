@@ -49,7 +49,8 @@ const storeInstance = createStore(
         feelingReducer,
         understandingReducer,
         supportReducer,
-        commentsReducer
+        commentsReducer,
+        adminReducer
     }),
     applyMiddleware(logger),
 );
