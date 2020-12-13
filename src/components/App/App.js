@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 //import axios from 'axios';
-import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import './App.css';
 
-import Admin from '../Admin/Admin'
 import Feeling from '../Feeling/Feeling.jsx'
 import Understanding from '../Understanding/Understanding.jsx';
 import Support from '../Support/Support.jsx';
 import Comments from '../Comments/Comments.jsx';
 import Review from '../Review/Review.jsx';
-
+import ThankYou from '../ThankYou/ThankYou.jsx'
+import Admin from '../Admin/Admin'
 
 class App extends Component {
 
@@ -51,6 +51,7 @@ class App extends Component {
               <li><Link to="/Comments">Comments</Link></li>
               <li><Link to="/Review">Review</Link></li>
               <li><Link to="/Admin">ADMIN</Link></li>
+              <li><Link to="/ThankYou">ThankYou</Link></li>
             </ul>
           </nav>
           <Route exact path="/Feeling" component={Feeling} />
@@ -59,6 +60,7 @@ class App extends Component {
           <Route exact path="/Comments" component={Comments} />
           <Route exact path="/Review" component={Review} />
           <Route exact path="/Admin" component={Admin} />
+          <Route exact path="/ThankYou" component={ThankYou} />
         </Router>
       </div>
     );

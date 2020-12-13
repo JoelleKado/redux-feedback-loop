@@ -46,7 +46,7 @@ class Review extends Component {
        // this.props.dispatch({ type: 'ADD_FEELING', payload: this.props.reduxState })
 
         
-        this.props.history.push('/Feeling');
+        this.props.history.push('/ThankYou');
     }
 
     // handleSubmit = () => {
