@@ -13,6 +13,10 @@ class Support extends Component {
         
     }
 
+    goBack = () => {
+        this.props.history.push('/Understanding')
+    }
+
     handleChange = (event) => {
         this.setState({
             support : event.target.value
@@ -20,7 +24,7 @@ class Support extends Component {
         //this.props.history.push('/Understanding');
     }
 
-
+    
     
 
     addSupport = () => {
@@ -39,7 +43,9 @@ class Support extends Component {
             <section>
                 <h2>Support Level</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <label>: </label>
+                    <label></label>
+                    <button onClick={this.goBack}>Back</button>
+
                     <input required placeholder="Support" type="number" onChange={this.handleChange}/>
                     <button onClick={this.addSupport}>Next</button>
 
