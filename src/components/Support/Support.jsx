@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class Support extends Component {
     state = {
-        support : ''
+        support: ''
     }
 
     goBack = () => {
@@ -12,21 +12,17 @@ class Support extends Component {
 
     handleChange = (event) => {
         this.setState({
-            support : event.target.value
+            support: event.target.value
         })
-        //this.props.history.push('/Understanding');
     }
 
     addSupport = () => {
         if (this.state.support === '') {
             alert('Please tell your level of support that you are feeling from the company.')
-            } else {
-                this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state })
-                this.props.history.push('/Comments')
-            }
-    }
-
-    handleSubmit = () => {
+        } else {
+            this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state })
+            this.props.history.push('/Comments')
+        }
     }
 
     render() {
@@ -36,8 +32,7 @@ class Support extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label></label>
                     <button onClick={this.goBack}>Back</button>
-
-                    <input required placeholder="Support" type="number" onChange={this.handleChange}/>
+                    <input required placeholder="Support" type="number" onChange={this.handleChange} />
                     <button onClick={this.addSupport}>Next</button>
 
                 </form>
@@ -48,6 +43,6 @@ class Support extends Component {
 //export default Support;
 const putReduxStateOnProps = (reduxState) => ({
     reduxState
-  });
-  
-  export default connect(putReduxStateOnProps)(Support);
+});
+
+export default connect(putReduxStateOnProps)(Support);

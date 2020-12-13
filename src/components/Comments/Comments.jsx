@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class Comments extends Component {
     state = {
-        comments : ''
+        comments: ''
     }
 
     goBack = () => {
@@ -12,9 +12,8 @@ class Comments extends Component {
 
     handleChange = (event) => {
         this.setState({
-            comments : event.target.value
+            comments: event.target.value
         });
-        //this.props.history.push('/Understanding');
     }
 
     addComments = () => {
@@ -33,7 +32,7 @@ class Comments extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label></label>
                     <button onClick={this.goBack}>Back</button>
-                    <input required placeholder="Comments" type="text" onChange={this.handleChange}/>
+                    <input required placeholder="Comments" type="text" onChange={this.handleChange} />
                     <button onClick={this.addComments}>Next</button>
                 </form>
             </section>
@@ -41,5 +40,5 @@ class Comments extends Component {
     }
 }
 //export default Comments;
-const putReduxStateOnProps = (reduxState) => ({reduxState});
+const putReduxStateOnProps = (reduxState) => ({ reduxState });
 export default connect(putReduxStateOnProps)(Comments);

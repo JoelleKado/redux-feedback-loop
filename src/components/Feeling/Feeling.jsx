@@ -3,18 +3,16 @@ import { connect } from 'react-redux';
 
 class Feeling extends Component {
     state = {
-        feeling : ''
+        feeling: ''
     }
 
     handleChange = (event) => {
         this.setState({
-            feeling : event.target.value
+            feeling: event.target.value
         })
-        //this.props.history.push('/Understanding');
     }
 
     addFeeling = () => {
-        
         if (this.state.feeling === '') {
             alert('Please tell us how you are feeling today.')
         } else {
@@ -23,17 +21,13 @@ class Feeling extends Component {
         }
     }
 
-    handleSubmit = () => {
-        
-    }
-
     render() {
         return (
             <section>
                 <h2>Your Feeling</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label></label>
-                    <input required placeholder="Feeling" type="number" onChange={this.handleChange}/>
+                    <input required placeholder="Feeling" type="number" onChange={this.handleChange} />
                     <button onClick={this.addFeeling}>Next</button>
 
                 </form>
@@ -41,6 +35,5 @@ class Feeling extends Component {
         )
     }
 };//END Feeling
-const putReduxStateOnProps = (reduxState) => ({reduxState});
+const putReduxStateOnProps = (reduxState) => ({ reduxState });
 export default connect(putReduxStateOnProps)(Feeling);
- 
