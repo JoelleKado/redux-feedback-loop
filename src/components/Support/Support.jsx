@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-
-
-
-
 class Support extends Component {
-
-
     state = {
         support : ''
-        
     }
 
     goBack = () => {
@@ -24,18 +17,16 @@ class Support extends Component {
         //this.props.history.push('/Understanding');
     }
 
-    
-    
-
     addSupport = () => {
-        this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state })
-
-        this.props.history.push('/Comments')
-
+        if (this.state.support === '') {
+            alert('Please tell your level of support that you are feeling from the company.')
+            } else {
+                this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state })
+                this.props.history.push('/Comments')
+            }
     }
 
     handleSubmit = () => {
-        
     }
 
     render() {

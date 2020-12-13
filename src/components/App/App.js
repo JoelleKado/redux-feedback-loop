@@ -1,34 +1,22 @@
 import React, { Component } from 'react';
 //import axios from 'axios';
-import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import './App.css';
 
-import Admin from '../Admin/Admin'
 import Feeling from '../Feeling/Feeling.jsx'
 import Understanding from '../Understanding/Understanding.jsx';
 import Support from '../Support/Support.jsx';
 import Comments from '../Comments/Comments.jsx';
 import Review from '../Review/Review.jsx';
-
+import ThankYou from '../ThankYou/ThankYou.jsx'
+import Admin from '../Admin/Admin'
 
 class App extends Component {
 
-  componentDidMount() {
-  //   this.getHistory();
-   }
-
-  // getHistory = () => {
-  //   // tell axios to make a get call, then dispatch the array results
-  //   axios.get ('/history').then( (response) => {
-  //     console.log (`GET Response:`, response.data);
-  //     // dispatch Array results
-  //     this.props.dispatch ({type: 'GOT_HISTORY', payload: response.data })
-
-  //   }).catch ( (err ) => {
-  //     console.log (`Error in Get`, err);
-  //   })
-  // }
+  // componentDidMount() {
+  // //   this.getHistory();
+  //  }
 
   render() {
     return (
@@ -36,10 +24,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Feedback!</h1>
           <h4><i>Don't forget it!</i></h4>
-          REDUX STATE: {JSON.stringify(this.props.reduxState)}
-
-          {/* <Admin/> */}
-          {/* <Feeling/> */}
+          {/* REDUX STATE: {JSON.stringify(this.props.reduxState)} */}
         </header>
         <br/>
         <Router>
@@ -50,6 +35,7 @@ class App extends Component {
               <li><Link to="/Support">Support</Link></li>
               <li><Link to="/Comments">Comments</Link></li>
               <li><Link to="/Review">Review</Link></li>
+              <li><Link to="/ThankYou">ThankYou</Link></li>
               <li><Link to="/Admin">ADMIN</Link></li>
             </ul>
           </nav>
@@ -59,6 +45,7 @@ class App extends Component {
           <Route exact path="/Comments" component={Comments} />
           <Route exact path="/Review" component={Review} />
           <Route exact path="/Admin" component={Admin} />
+          <Route exact path="/ThankYou" component={ThankYou} />
         </Router>
       </div>
     );
