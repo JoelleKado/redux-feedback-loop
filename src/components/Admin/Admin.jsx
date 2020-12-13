@@ -42,9 +42,6 @@ class Admin extends Component {
         return (
             <section>
                 <h2>ADMIN MODE</h2>
-                REDUX STATE: {JSON.stringify(this.props.reduxState)}
-
-
                 <table className="center">
                     <tbody>
                         <tr>
@@ -55,7 +52,6 @@ class Admin extends Component {
                             <th>Comments</th>
                             <th>Flagged</th>
                             <th>date</th>
-
                         </tr>
                         {this.props.reduxState.adminReducer.map((article, i) => {
                             return (
@@ -67,18 +63,18 @@ class Admin extends Component {
                                     <td>{article.comments}</td>
                                     <td>{article.flagged}</td>
                                     <td>{article.date}</td>
-                                   
                                 </tr>)
                         })}
                     </tbody>
                 </table>
 
-                 <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit}>
                     <label></label>
                     {/* <input required placeholder="Comments" type="text" onChange={this.handleChange}/> */}
                     <button onClick={this.getHistory}>GET HISTORY</button>
-
                 </form>
+                
+                REDUX STATE: {JSON.stringify(this.props.reduxState)}
             </section>
         )
     }
