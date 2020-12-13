@@ -51,24 +51,17 @@ class Review extends Component {
     <td>{this.props.reduxState.understandingReducer.understanding}</td>
     <td>{this.props.reduxState.supportReducer.support}</td>
     <td>{this.props.reduxState.commentsReducer.comments}</td>
-
-
-  </tr>
-  {/* <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr> */}
+    </tr>
   </tbody>
         </table>
       
 
-                <form onSubmit={this.handleSubmit}>
-                    <label>: </label>
-                    {/* <input required placeholder="Feeling" type="number" onChange={this.handleChange}/> */}
+                {/* <form onSubmit={this.handleSubmit}>
+                    <label></label>
+                    <input required placeholder="Feeling" type="number" onChange={this.handleChange}/>
                     <button onClick={this.submitFeedback}>Next</button>
 
-                </form>
+                </form> */}
             </>
         )
     }
