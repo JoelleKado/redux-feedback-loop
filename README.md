@@ -40,8 +40,6 @@ npm run client
 2. Your feedback transaction concludes with a Review Page: You can view your feedback article and if you are satisfied with your article, click `SUBMIT FEEDBACK`
 3. Feel Free to submit feedback as often as you like.
 
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 ## Acknowledgement
 Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. Thank you https://github.com/zuberabdikadir, https://github.com/jbird55044, https://github.com/Cassen999: for showing me the mechanics of redux. Thank you https://github.com/freder48: for finding my bugs with your speedy eyes.
 ## Support
