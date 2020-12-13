@@ -17,6 +17,7 @@ class Feeling extends Component {
     }
 
     addFeeling = () => {
+        
         this.props.dispatch({ type: 'ADD_FEELING', payload: this.state })
 
         

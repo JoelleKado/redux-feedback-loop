@@ -13,11 +13,19 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    console.log('POST /api/pizza');
-    pool.query('SELECT * from "pizza";').then((result) => {
-        res.send(result.rows);
+    console.log('POST /history');
+    let newFeedback = req.body;
+  console.log('here is our newFeedback:', newFeedback);
+
+  let queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
+  VALUES ($1, $2, $3, $4);`;
+
+    pool.query(queryText, [newFeedback.feelingReducer.feeling, newFeedback.understandingReducer.understanding, 
+                            newFeedback.supportReducer.support, newFeedback.commentsReducer.comments
+                            ]).then((result) => {
+        res.sendStatus(201);
     }).catch((error) => {
-        console.log('Error GET /api/pizza', error)
+        //console.log('Error GET /api/pizza', error)
         res.sendStatus(500);
     });
 })
