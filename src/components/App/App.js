@@ -52,7 +52,7 @@ class App extends Component {
               <li><Link to="/Support">Support</Link></li>
               <li><Link to="/Comments">Comments</Link></li>
               <li><Link to="/Review">Review</Link></li>
-              <li><Link to="/Admin">Admin</Link></li>
+              <li><Link to="/Admin">ADMIN</Link></li>
 
 
             </ul>
