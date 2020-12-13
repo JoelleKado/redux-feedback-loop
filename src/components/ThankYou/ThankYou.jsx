@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 //import { connect } from 'react-redux';
 
 class ThankYou extends Component {
-
-
     state = {
         understanding : ''
-        
     }
 
     goHome = () => {
@@ -40,15 +37,11 @@ class ThankYou extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label></label>
                     {/* <button onClick={this.goBack}>Back</button> */}
-
                     {/* <input required placeholder="Understanding" type="number" onChange={this.handleChange}/> */}
-
                     <button onClick={this.goHome}>DONE</button>
-
-                    
                 </form>
             </section>
         )
     }
-}
+};//END ThankYou
 export default ThankYou

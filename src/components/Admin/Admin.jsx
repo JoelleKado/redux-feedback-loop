@@ -41,7 +41,9 @@ class Admin extends Component {
     render() {
         return (
             <section>
-                <h2>Hello from Admin</h2>
+                <h2>ADMIN MODE</h2>
+                REDUX STATE: {JSON.stringify(this.props.reduxState)}
+
 
                 <table className="center">
                     <tbody>
