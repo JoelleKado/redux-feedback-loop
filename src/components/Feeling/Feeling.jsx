@@ -32,7 +32,7 @@ class Feeling extends Component {
             <section>
                 <h2>Your Feeling</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <label>: </label>
+                    <label></label>
                     <input required placeholder="Feeling" type="number" onChange={this.handleChange}/>
                     <button onClick={this.addFeeling}>Next</button>
 

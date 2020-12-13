@@ -12,6 +12,10 @@ class Comments extends Component {
         
     }
 
+    goBack = () => {
+        this.props.history.push('/Support')
+    }
+
     handleChange = (event) => {
         this.setState({
             comments : event.target.value
@@ -38,7 +42,8 @@ class Comments extends Component {
             <section>
                 <h2>Your Comments</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <label>: </label>
+                    <label></label>
+                    <button onClick={this.goBack}>Back</button>
                     <input required placeholder="Comments" type="text" onChange={this.handleChange}/>
                     <button onClick={this.addComments}>Next</button>
 

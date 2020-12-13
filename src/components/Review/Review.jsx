@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import axios from 'axios';
+//import axios from 'axios';
 
 
 class Review extends Component {
@@ -11,6 +11,10 @@ class Review extends Component {
         
     }
 
+    goBack = () => {
+        this.props.history.push('/Comments')
+    }
+
     handleChange = (event) => {
         this.setState({
             feeling : event.target.value
@@ -18,7 +22,7 @@ class Review extends Component {
         //this.props.history.push('/Understanding');
     }
 
-    submitFeedback = () => {
+    goHome = () => {
         console.log('reduxState being submitted:', this.props.reduxState);
 
 
@@ -27,7 +31,7 @@ class Review extends Component {
        // this.props.dispatch({ type: 'ADD_FEELING', payload: this.props.reduxState })
 
         
-       // this.props.history.push('/Understanding');
+        this.props.history.push('/Feeling');
     }
 
     handleSubmit = () => {
@@ -56,12 +60,14 @@ class Review extends Component {
         </table>
       
 
-                {/* <form onSubmit={this.handleSubmit}>
+                 <form onSubmit={this.handleSubmit}>
                     <label></label>
-                    <input required placeholder="Feeling" type="number" onChange={this.handleChange}/>
-                    <button onClick={this.submitFeedback}>Next</button>
+                    {/* <input required placeholder="Feeling" type="number" onChange={this.handleChange}/> */}
+                    <button onClick={this.goBack}>Back</button>
 
-                </form> */}
+                    <button onClick={this.goHome}>DONE</button>
+
+                </form> 
             </>
         )
     }

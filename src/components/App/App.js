@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -14,9 +14,9 @@ import Review from '../Review/Review.jsx';
 
 class App extends Component {
 
-  // componentDidMount() {
+  componentDidMount() {
   //   this.getHistory();
-  // }
+   }
 
   // getHistory = () => {
   //   // tell axios to make a get call, then dispatch the array results
@@ -45,7 +45,9 @@ class App extends Component {
         <Router>
           <nav>
             <ul>
-              <li><Link to="/Feeling">Feeling</Link></li>
+            
+              {/* <li><Link to="/">HOME</Link></li> */}
+              <li><Link to="/Feeling">HOME</Link></li>
               <li><Link to="/Understanding">Understanding</Link></li>
               <li><Link to="/Support">Support</Link></li>
               <li><Link to="/Comments">Comments</Link></li>
@@ -55,6 +57,7 @@ class App extends Component {
 
             </ul>
           </nav>
+          {/* <Route exact path="/" component={App} /> */}
           <Route exact path="/Feeling" component={Feeling} />
           <Route exact path="/Understanding" component={Understanding} />
           <Route exact path="/Support" component={Support} />
