@@ -6,12 +6,11 @@
 
 ## Your Personality is our Greatest Asset
 
-_Duration: 15hrs_
+_Duration: 20hrs_
 
 We value you as a person who is part of our organization. At my company we believe that the strength of our company is the strength of our relationships. Help us strengthen our relationship with you, each day, by letting us ask you a series of questions that query your feelings of the company and the feelings of yourself.
 
-## Screen Shot
-![intro](public/images/screenShots/screenShot.png)
+![intro](public/images/screenShots/screenShotOne.png)
 
 ### Prerequisites
 
@@ -34,7 +33,7 @@ Now that the server is running, open a new terminal tab with `cmd + t` and start
 npm run client
 ```
 
-## Tell Us What's on your Mind
+## Tell Us What's on Your Mind
 
 1. At the HOME page, You will be presented with your first question. Tell us how you are feeling today, on a scale of 1-5. One your feeling is inserted into the input field, click `NEXT` to be presented the next question. To return to a prior question, click `BACK`
 2. Your feedback transaction concludes with a Review Page: You can view your feedback article and if you are satisfied with your article, click `SUBMIT FEEDBACK`

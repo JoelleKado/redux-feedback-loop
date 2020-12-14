@@ -1,3 +1,4 @@
+//MODULES
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
@@ -29,6 +30,11 @@ class Admin extends Component {
         return (
             <section>
                 <h2>ADMIN MODE</h2>
+
+                <form onSubmit={this.handleSubmit}>
+                    <label></label>
+                    <button onClick={this.getHistory}>GET HISTORY</button>
+                </form>
                 <table className="center">
                     <tbody>
                         <tr>
@@ -50,17 +56,10 @@ class Admin extends Component {
                                     <td>{article.comments}</td>
                                     <td>{article.flagged}</td>
                                     <td>{article.date}</td>
-                                    {/* <button onClick={this.deleteArticle}>DELETE</button> */}
                                 </tr>)
                         })}
                     </tbody>
                 </table>
-
-                <form onSubmit={this.handleSubmit}>
-                    <label></label>
-                    <button onClick={this.getHistory}>GET HISTORY</button>
-                </form>
-
                 REDUX STATE: {JSON.stringify(this.props.reduxState)}
             </section>
         )

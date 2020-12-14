@@ -1,9 +1,10 @@
+//MODULES
 import React, { Component } from 'react';
 //import axios from 'axios';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+//STYLING
 import './App.css';
-
+//COMPONENTS
 import Feeling from '../Feeling/Feeling.jsx'
 import Understanding from '../Understanding/Understanding.jsx';
 import Support from '../Support/Support.jsx';
@@ -14,10 +15,6 @@ import Admin from '../Admin/Admin'
 
 class App extends Component {
 
-  // componentDidMount() {
-  // //   this.getHistory();
-  //  }
-
   render() {
     return (
       <div className="App">
@@ -26,16 +23,16 @@ class App extends Component {
           <h4><i>Don't forget it!</i></h4>
           {/* REDUX STATE: {JSON.stringify(this.props.reduxState)} */}
         </header>
-        <br/>
+        <br />
         <Router>
           <nav>
             <ul>
               <li><Link to="/Feeling">HOME</Link></li>
-              <li><Link to="/Understanding">Understanding</Link></li>
+              {/* <li><Link to="/Understanding">Understanding</Link></li>
               <li><Link to="/Support">Support</Link></li>
               <li><Link to="/Comments">Comments</Link></li>
               <li><Link to="/Review">Review</Link></li>
-              <li><Link to="/ThankYou">ThankYou</Link></li>
+              <li><Link to="/ThankYou">ThankYou</Link></li> */}
               <li><Link to="/Admin">ADMIN</Link></li>
             </ul>
           </nav>
@@ -50,8 +47,7 @@ class App extends Component {
       </div>
     );
   }
-}
-
-//export default App;
-const putReduxStateOnProps = (reduxState) => ({ reduxState })
-export default connect(putReduxStateOnProps)(App);
+};//END App
+export default App;
+// const putReduxStateOnProps = (reduxState) => ({ reduxState })
+// export default connect(putReduxStateOnProps)(App);

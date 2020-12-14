@@ -1,4 +1,17 @@
+//MODULES
 import React, { Component } from 'react';
+//STYLING
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
+import blue from '@material-ui/core/colors/blue';
+//COMPONENTS
+import DoneButton from '../Buttons/DoneButton/DoneButton.jsx'
+
+const theme = createMuiTheme({
+    palette: {
+        primary: blue
+    }
+});
 
 class ThankYou extends Component {
     state = {
@@ -21,7 +34,9 @@ class ThankYou extends Component {
                 <h1>Thank You for your Feedback!</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label></label>
-                    <button onClick={this.goHome}>DONE</button>
+                    <MuiThemeProvider theme={theme}>
+                        <DoneButton doneProp={this.goHome} />
+                    </MuiThemeProvider>
                 </form>
             </section>
         )
