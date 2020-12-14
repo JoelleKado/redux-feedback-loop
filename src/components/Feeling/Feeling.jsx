@@ -15,12 +15,12 @@ import FeelingNextButton from '../Buttons/FeelingNextButton/FeelingNextButton';
 
 const theme = createMuiTheme({
     palette: {
-      primary: blue,
-      secondary: green,
-      error: red,
-      contrastThreshold: 3,
-      tonalOffset: 0.2,
-    }
+      primary: green,
+    //   secondary: red,
+    //   error: yellow,
+    //   contrastThreshold: 3,
+    //   tonalOffset: 0.2,
+     }
   });
 
 

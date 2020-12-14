@@ -1,4 +1,4 @@
-//this button will transport you from the Feeling page to the Understanding page
+//this button will transport you from the Support page to the Comments page
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';

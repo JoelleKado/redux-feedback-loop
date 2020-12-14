@@ -7,18 +7,17 @@ import green from '@material-ui/core/colors/green';
 import blue from '@material-ui/core/colors/blue';
 import red from '@material-ui/core/colors/red';
 import CommentsNextButton from '../Buttons/CommentsNextButton/CommentsNextButton.jsx';
+import CommentsBackButton from '../Buttons/CommentsBackButton/CommentsBackButton.jsx'
 
 const theme = createMuiTheme({
     palette: {
-      primary: blue,
-      secondary: green,
-      error: red,
-      contrastThreshold: 3,
-      tonalOffset: 0.2,
+      primary: green,
+      secondary: red
+    //   error: red,
+    //   contrastThreshold: 3,
+    //   tonalOffset: 0.2,
     }
   });
-
-
 
 class Comments extends Component {
     state = {
@@ -50,7 +49,13 @@ class Comments extends Component {
                 <h2>Your Comments</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label></label>
-                    <button onClick={this.goBack}>Back</button>
+                    {/* <button onClick={this.goBack}>Back</button> */}
+                    <MuiThemeProvider theme={theme}>
+                       <CommentsBackButton commentsBackProp={this.goBack}/>
+                        {/* <button onClick={this.addFeeling}>Next</button> */}
+                    </MuiThemeProvider>
+                    
+                    
                     <input required placeholder="Comments" type="text" onChange={this.handleChange} />
                     <MuiThemeProvider theme={theme}>
                        <CommentsNextButton addCommentsProp={this.addComments}/>
