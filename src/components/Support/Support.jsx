@@ -1,6 +1,7 @@
+//MODULES
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+//STYLING
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import green from '@material-ui/core/colors/green';
@@ -13,9 +14,6 @@ const theme = createMuiTheme({
     palette: {
       primary: green,
       secondary: red
-    //   error: red,
-    //   contrastThreshold: 3,
-    //   tonalOffset: 0.2,
     }
   });
 

@@ -1,9 +1,8 @@
+//MODULES
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import Button from '@material-ui/core/Button';
-
-
+//STYLING
 //import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 //import { ThemeProvider } from '@material-ui/core/styles/';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';

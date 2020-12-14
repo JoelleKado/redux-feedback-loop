@@ -1,4 +1,4 @@
-//***THIS BUTTON WILL TRANSPORT YOU FROM THE FEELING PAGE TO THE UNDERSTANDING PAGE
+//***THIS BUTTON WILL TRANSPORT YOU FROM THE REVIEW PAGE TO THE COMMENTS PAGE
 //MODULES
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
@@ -15,13 +15,13 @@ const styles = theme => ({
 
 
 
-class FeelingNextButton extends Component {
+class ReviewBackButton extends Component {
     render() {
         const {classes} = this.props;
-        return ( <Button onClick={this.props.addFeelingProp} variant="contained" color="primary" /*className={classes}*/ >
-            NEXT
+        return ( <Button onClick={this.props.reviewBackProp} variant="contained" color="secondary" /*className={classes}*/ >
+            BACK
         </Button>)
     }
 }
 
-export default withStyles(styles)(FeelingNextButton);
+export default withStyles(styles)(ReviewBackButton);

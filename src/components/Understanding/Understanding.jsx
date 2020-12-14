@@ -1,6 +1,7 @@
+//MODULES
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+//STYLING
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import green from '@material-ui/core/colors/green';
@@ -13,21 +14,8 @@ const theme = createMuiTheme({
     palette: {
       primary: green,
         secondary: red
-    //   error: red,
-    //   contrastThreshold: 3,
-    //   tonalOffset: 0.2,
     }
   });
-
-//   const redTheme = createMuiTheme({
-//     palette: {
-//       primary: red
-//        //secondary: red
-//     //   error: red,
-//     //   contrastThreshold: 3,
-//     //   tonalOffset: 0.2,
-//     }
-//   }); 
 
 class Understanding extends Component {
     state = {
@@ -62,19 +50,13 @@ class Understanding extends Component {
                 <h2>Your Understanding</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label></label>
-                    {/* <button onClick={this.goBack}>Back</button> */}
                     <MuiThemeProvider theme={theme}>
                        <UnderstandingBackButton UnderstandingBackProp={this.goBack}/>
-                        {/* <button onClick={this.addFeeling}>Next</button> */}
                     </MuiThemeProvider>
-                    
                     <input required placeholder="Understanding" type="number" onChange={this.handleChange}/>
                     <MuiThemeProvider theme={theme}>
                        <UnderstandingNextButton addUnderstandingProp={this.addUnderstanding}/>
-                        {/* <button onClick={this.addFeeling}>Next</button> */}
                     </MuiThemeProvider>
-                    
-                    {/* <button onClick={this.addUnderstanding}>Next</button> */}
                 </form>
             </section>
         )

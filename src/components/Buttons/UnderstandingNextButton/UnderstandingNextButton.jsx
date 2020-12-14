@@ -1,18 +1,15 @@
-//this button will transport you from the Understanding page to the Support page
+//THIS BUTTON WILL TRANSPORT YOU FROM THE UNDERSTANDING PAGE TO THE SUPPORT PAGE
+//MODULES
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
-
-import PropTypes from 'prop-types';
-
+//import PropTypes from 'prop-types';
 
 const styles = theme => ({
   button: {
     margin: theme.spacing(1),
   }
 });
-
-
 
 class UnderstandingNextButton extends Component {
     render() {

@@ -5,13 +5,6 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 //STYLING
 import './App.css';
-// import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-// import { ThemeProvider } from '@material-ui/core/styles/';
-// import { createMuiTheme } from '@material-ui/core/styles';
-// import green from '@material-ui/core/colors/green';
-// import blue from '@material-ui/core/colors/blue';
-// import red from '@material-ui/core/colors/red';
-
 //COMPONENTS
 import Feeling from '../Feeling/Feeling.jsx'
 import Understanding from '../Understanding/Understanding.jsx';
@@ -21,11 +14,6 @@ import Review from '../Review/Review.jsx';
 import ThankYou from '../ThankYou/ThankYou.jsx'
 import Admin from '../Admin/Admin'
 import NextButton from '../Buttons/FeelingNextButton/FeelingNextButton.jsx';
-
-
-
-
-
 
 class App extends Component {
 

@@ -1,6 +1,7 @@
+//MODULES
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+//STYLING
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import green from '@material-ui/core/colors/green';
@@ -13,9 +14,6 @@ const theme = createMuiTheme({
     palette: {
       primary: green,
       secondary: red
-    //   error: red,
-    //   contrastThreshold: 3,
-    //   tonalOffset: 0.2,
     }
   });
 
@@ -49,24 +47,17 @@ class Comments extends Component {
                 <h2>Your Comments</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label></label>
-                    {/* <button onClick={this.goBack}>Back</button> */}
                     <MuiThemeProvider theme={theme}>
                        <CommentsBackButton commentsBackProp={this.goBack}/>
-                        {/* <button onClick={this.addFeeling}>Next</button> */}
                     </MuiThemeProvider>
-                    
-                    
                     <input required placeholder="Comments" type="text" onChange={this.handleChange} />
                     <MuiThemeProvider theme={theme}>
                        <CommentsNextButton addCommentsProp={this.addComments}/>
-                        {/* <button onClick={this.addFeeling}>Next</button> */}
                     </MuiThemeProvider>
-                    {/* <button onClick={this.addComments}>Next</button> */}
                 </form>
             </section>
         )
     }
 }
-//export default Comments;
 const putReduxStateOnProps = (reduxState) => ({ reduxState });
 export default connect(putReduxStateOnProps)(Comments);
