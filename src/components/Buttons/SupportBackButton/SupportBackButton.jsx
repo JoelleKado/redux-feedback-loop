@@ -12,7 +12,6 @@ const styles = theme => ({
 
 class SupportBackButton extends Component {
   render() {
-    const { classes } = this.props;
     return (<Button onClick={this.props.supportBackProp} variant="contained" color="secondary">
       BACK
     </Button>)

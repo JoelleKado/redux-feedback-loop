@@ -12,7 +12,6 @@ const styles = theme => ({
 
 class UnderstandingBackButton extends Component {
   render() {
-    const { classes } = this.props;
     return (<Button onClick={this.props.UnderstandingBackProp} variant="contained" color="secondary">
       BACK
     </Button>)

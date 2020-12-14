@@ -12,7 +12,6 @@ const styles = theme => ({
 
 class UnderstandingNextButton extends Component {
     render() {
-        const {classes} = this.props;
         return ( <Button onClick={this.props.addUnderstandingProp} variant="contained" color="primary" /*className={classes}*/ >
             NEXT
         </Button>)

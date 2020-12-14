@@ -12,7 +12,6 @@ const styles = theme => ({
 
 class FeelingNextButton extends Component {
   render() {
-    const { classes } = this.props;
     return (<Button onClick={this.props.addFeelingProp} variant="contained" color="primary" /*className={classes}*/>
       NEXT
     </Button>)

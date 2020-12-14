@@ -13,7 +13,6 @@ const styles = theme => ({
 
 class SubmitButton extends Component {
   render() {
-    const { classes } = this.props;
     return (<Button onClick={this.props.submitProp} variant="contained" color="primary">
       SUBMIT FEEDBACK
     </Button>)

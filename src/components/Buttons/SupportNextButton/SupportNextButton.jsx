@@ -12,7 +12,6 @@ const styles = theme => ({
 
 class SupportNextButton extends Component {
   render() {
-    const { classes } = this.props;
     return (<Button onClick={this.props.addSupportProp} variant="contained" color="primary">
       NEXT
     </Button>)

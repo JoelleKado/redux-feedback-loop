@@ -12,7 +12,6 @@ const styles = theme => ({
 
 class ReviewBackButton extends Component {
   render() {
-    const { classes } = this.props;
     return (<Button onClick={this.props.reviewBackProp} variant="contained" color="secondary">
       BACK
     </Button>)

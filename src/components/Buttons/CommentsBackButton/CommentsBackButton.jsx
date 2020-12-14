@@ -13,7 +13,6 @@ const styles = theme => ({
 
 class CommentsBackButton extends Component {
   render() {
-    const { classes } = this.props;
     return (<Button onClick={this.props.commentsBackProp} variant="contained" color="secondary">
       BACK
     </Button>)

@@ -13,7 +13,6 @@ const styles = theme => ({
 
 class CommentsNextButton extends Component {
   render() {
-    const { classes } = this.props;
     return (<Button onClick={this.props.addCommentsProp} variant="contained" color="primary">
       NEXT
     </Button>)
