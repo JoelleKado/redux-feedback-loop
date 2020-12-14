@@ -3,7 +3,6 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
-//import PropTypes from 'prop-types';
 
 const styles = theme => ({
   button: {
@@ -18,6 +17,5 @@ class UnderstandingNextButton extends Component {
             NEXT
         </Button>)
     }
-}
-
+};//END UnderstandingNextButton
 export default withStyles(styles)(UnderstandingNextButton);

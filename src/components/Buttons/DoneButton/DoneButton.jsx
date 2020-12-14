@@ -12,15 +12,11 @@ const styles = theme => ({
 });
 
 class DoneButton extends Component {
-    render() {
-        const {classes} = this.props;
-        return ( <Button 
-                    onClick={this.props.doneProp} 
-                    variant="contained" 
-                    color="primary" /*className={classes}*/ >
-                  DONE
-                </Button>)
-    }
-}
-
+  render() {
+    const { classes } = this.props;
+    return (<Button onClick={this.props.doneProp} variant="contained" color="primary">
+      DONE
+    </Button>)
+  }
+};//END DoneButton
 export default withStyles(styles)(DoneButton);

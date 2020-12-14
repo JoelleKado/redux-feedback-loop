@@ -6,7 +6,6 @@ import axios from 'axios';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import green from '@material-ui/core/colors/green';
-import blue from '@material-ui/core/colors/blue';
 import red from '@material-ui/core/colors/red';
 //COMPONENTS
 import ReviewBackButton from '../Buttons/ReviewBackButton/ReviewBackButton.jsx'
@@ -14,10 +13,10 @@ import SubmitButton from '../Buttons/SubmitButton/SubmitButton.jsx'
 
 const theme = createMuiTheme({
     palette: {
-      primary: green,
-      secondary: red
+        primary: green,
+        secondary: red
     }
-  });
+});
 
 class Review extends Component {
 
@@ -63,13 +62,11 @@ class Review extends Component {
                 </table>
                 <form onSubmit={this.handleSubmit}>
                     <label></label>
-                    {/* <button onClick={this.goBack}>Back</button> */}
                     <MuiThemeProvider theme={theme}>
-                       <ReviewBackButton reviewBackProp={this.goBack}/>
-                    </MuiThemeProvider>                
-                    {/* <button onClick={this.submitFeedback}>SUBMIT FEEDBACK</button> */}
+                        <ReviewBackButton reviewBackProp={this.goBack} />
+                    </MuiThemeProvider>
                     <MuiThemeProvider theme={theme}>
-                       <SubmitButton submitProp={this.submitFeedback}/>
+                        <SubmitButton submitProp={this.submitFeedback} />
                     </MuiThemeProvider>
                 </form>
             </>

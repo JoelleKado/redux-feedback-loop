@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 //import axios from 'axios';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 //STYLING
 import './App.css';
 //COMPONENTS
@@ -13,13 +12,8 @@ import Comments from '../Comments/Comments.jsx';
 import Review from '../Review/Review.jsx';
 import ThankYou from '../ThankYou/ThankYou.jsx'
 import Admin from '../Admin/Admin'
-import NextButton from '../Buttons/FeelingNextButton/FeelingNextButton.jsx';
 
 class App extends Component {
-
-  // componentDidMount() {
-  // //   this.getHistory();
-  //  }
 
   render() {
     return (
@@ -29,7 +23,7 @@ class App extends Component {
           <h4><i>Don't forget it!</i></h4>
           {/* REDUX STATE: {JSON.stringify(this.props.reduxState)} */}
         </header>
-        <br/>
+        <br />
         <Router>
           <nav>
             <ul>
@@ -53,8 +47,7 @@ class App extends Component {
       </div>
     );
   }
-}
-
-//export default App;
-const putReduxStateOnProps = (reduxState) => ({ reduxState })
-export default connect(putReduxStateOnProps)(App);
+};//END App
+export default App;
+// const putReduxStateOnProps = (reduxState) => ({ reduxState })
+// export default connect(putReduxStateOnProps)(App);

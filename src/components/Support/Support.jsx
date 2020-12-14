@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import green from '@material-ui/core/colors/green';
-import blue from '@material-ui/core/colors/blue';
 import red from '@material-ui/core/colors/red';
 //COMPONENTS
 import SupportNextButton from '../Buttons/SupportNextButton/SupportNextButton.jsx'
@@ -13,11 +12,10 @@ import SupportBackButton from '../Buttons/SupportBackButton/SupportBackButton.js
 
 const theme = createMuiTheme({
     palette: {
-      primary: green,
-      secondary: red
+        primary: green,
+        secondary: red
     }
-  });
-
+});
 
 class Support extends Component {
     state = {
@@ -49,18 +47,12 @@ class Support extends Component {
                 <h2>Support Level</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label></label>
-                    {/* <button onClick={this.goBack}>Back</button> */}
                     <MuiThemeProvider theme={theme}>
-                       <SupportBackButton supportBackProp={this.goBack}/>
-                        {/* <button onClick={this.addFeeling}>Next</button> */}
+                        <SupportBackButton supportBackProp={this.goBack} />
                     </MuiThemeProvider>
-                    
-                    
                     <input required placeholder="Support" type="number" onChange={this.handleChange} />
-                    {/* <button onClick={this.addSupport}>Next</button> */}
                     <MuiThemeProvider theme={theme}>
-                       <SupportNextButton addSupportProp={this.addSupport}/>
-                        {/* <button onClick={this.addFeeling}>Next</button> */}
+                        <SupportNextButton addSupportProp={this.addSupport} />
                     </MuiThemeProvider>
                 </form>
             </section>
@@ -68,5 +60,5 @@ class Support extends Component {
     }
 }
 //export default Support;
-const putReduxStateOnProps = (reduxState) => ({reduxState});
+const putReduxStateOnProps = (reduxState) => ({ reduxState });
 export default connect(putReduxStateOnProps)(Support);

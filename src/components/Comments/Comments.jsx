@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import green from '@material-ui/core/colors/green';
-import blue from '@material-ui/core/colors/blue';
 import red from '@material-ui/core/colors/red';
 //COMPONENTS
 import CommentsNextButton from '../Buttons/CommentsNextButton/CommentsNextButton.jsx';
@@ -13,10 +12,10 @@ import CommentsBackButton from '../Buttons/CommentsBackButton/CommentsBackButton
 
 const theme = createMuiTheme({
     palette: {
-      primary: green,
-      secondary: red
+        primary: green,
+        secondary: red
     }
-  });
+});
 
 class Comments extends Component {
     state = {
@@ -49,11 +48,11 @@ class Comments extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label></label>
                     <MuiThemeProvider theme={theme}>
-                       <CommentsBackButton commentsBackProp={this.goBack}/>
+                        <CommentsBackButton commentsBackProp={this.goBack} />
                     </MuiThemeProvider>
                     <input required placeholder="Comments" type="text" onChange={this.handleChange} />
                     <MuiThemeProvider theme={theme}>
-                       <CommentsNextButton addCommentsProp={this.addComments}/>
+                        <CommentsNextButton addCommentsProp={this.addComments} />
                     </MuiThemeProvider>
                 </form>
             </section>

@@ -12,12 +12,11 @@ const styles = theme => ({
 });
 
 class CommentsNextButton extends Component {
-    render() {
-        const {classes} = this.props;
-        return ( <Button onClick={this.props.addCommentsProp} variant="contained" color="primary" /*className={classes}*/ >
-            NEXT
-        </Button>)
-    }
-}
-
+  render() {
+    const { classes } = this.props;
+    return (<Button onClick={this.props.addCommentsProp} variant="contained" color="primary">
+      NEXT
+    </Button>)
+  }
+};//END CommentsNextButton
 export default withStyles(styles)(CommentsNextButton);

@@ -3,7 +3,6 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
-//import PropTypes from 'prop-types';
 
 const styles = theme => ({
   button: {
@@ -12,12 +11,11 @@ const styles = theme => ({
 });
 
 class UnderstandingBackButton extends Component {
-    render() {
-        const {classes} = this.props;
-        return ( <Button onClick={this.props.UnderstandingBackProp} variant="contained" color="secondary" /*className={classes}*/ >
-            BACK
-        </Button>)
-    }
-}
-
+  render() {
+    const { classes } = this.props;
+    return (<Button onClick={this.props.UnderstandingBackProp} variant="contained" color="secondary">
+      BACK
+    </Button>)
+  }
+};//END UnderstandingBackButton
 export default withStyles(styles)(UnderstandingBackButton);
