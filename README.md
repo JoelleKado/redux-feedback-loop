@@ -1,6 +1,6 @@
-![REPO SIZE](https://img.shields.io/github/repo-size/JoelleKado/react-gallery.svg?style=flat-square)
-![TOP_LANGUAGE](https://img.shields.io/github/languages/top/JoelleKado/react-gallery.svg?style=flat-square)
-![FORKS](https://img.shields.io/github/forks/JoelleKado/react-gallery.svg?style=social)
+![REPO SIZE](https://img.shields.io/github/repo-size/JoelleKado/redux-feedback-loop.svg?style=flat-square)
+![TOP_LANGUAGE](https://img.shields.io/github/languages/top/JoelleKado/redux-feedback-loop.svg?style=flat-square)
+![FORKS](https://img.shields.io/github/forks/JoelleKado/redux-feedback-loop.svg?style=social)
 
 # Redux Feedback Loop
 
