@@ -34,11 +34,11 @@ class App extends Component {
           <nav>
             <ul>
               <li><Link to="/Feeling">HOME</Link></li>
-              <li><Link to="/Understanding">Understanding</Link></li>
+              {/* <li><Link to="/Understanding">Understanding</Link></li>
               <li><Link to="/Support">Support</Link></li>
               <li><Link to="/Comments">Comments</Link></li>
               <li><Link to="/Review">Review</Link></li>
-              <li><Link to="/ThankYou">ThankYou</Link></li>
+              <li><Link to="/ThankYou">ThankYou</Link></li> */}
               <li><Link to="/Admin">ADMIN</Link></li>
             </ul>
           </nav>
