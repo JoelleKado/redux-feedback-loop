@@ -1,6 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
+import green from '@material-ui/core/colors/green';
+import blue from '@material-ui/core/colors/blue';
+import red from '@material-ui/core/colors/red';
+import SupportNextButton from '../Buttons/SupportNextButton/SupportNextButton.jsx'
+
+const theme = createMuiTheme({
+    palette: {
+      primary: blue,
+      secondary: green,
+      error: red,
+      contrastThreshold: 3,
+      tonalOffset: 0.2,
+    }
+  });
+
+
 class Support extends Component {
     state = {
         support: ''
@@ -33,8 +51,11 @@ class Support extends Component {
                     <label></label>
                     <button onClick={this.goBack}>Back</button>
                     <input required placeholder="Support" type="number" onChange={this.handleChange} />
-                    <button onClick={this.addSupport}>Next</button>
-
+                    {/* <button onClick={this.addSupport}>Next</button> */}
+                    <MuiThemeProvider theme={theme}>
+                       <SupportNextButton addSupportProp={this.addSupport}/>
+                        {/* <button onClick={this.addFeeling}>Next</button> */}
+                    </MuiThemeProvider>
                 </form>
             </section>
         )
