@@ -7,6 +7,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import green from '@material-ui/core/colors/green';
 import blue from '@material-ui/core/colors/blue';
 import red from '@material-ui/core/colors/red';
+//COMPONENTS
 import CommentsNextButton from '../Buttons/CommentsNextButton/CommentsNextButton.jsx';
 import CommentsBackButton from '../Buttons/CommentsBackButton/CommentsBackButton.jsx'
 
